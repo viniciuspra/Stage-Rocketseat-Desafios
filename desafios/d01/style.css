@@ -90,9 +90,22 @@ main > p {
   animation: downtop .7s;
 }
 
+.img2 {
+  display: none;
+}
+
+.img6 {
+  display: none;
+}
+
 .card img:hover {
   transform: scale(1.1);
   filter: blur(1px);
+}
+
+footer {
+  font-family: 'Palanquin', sans-serif;
+  display: none;
 }
 
 @keyframes downtop {
@@ -116,6 +129,88 @@ main > p {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  header {
+    min-width: 37.7rem;
+    height: 100vh;
+    position: relative;
+  }
+
+  main {
+    max-width: 65rem;
+  }
+
+  main > p {
+    font-family: 'Roboto', sans-serif;
+    width: 27.5rem;
+    position: absolute;
+    top: 33.3rem;
+    left: 5rem;
+
+    font-size: 2.1rem;
+    line-height: 2rem;
+    color: white;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas: 
+    "a b c"
+    "d b e"
+    "d f e"
+  ;
+    gap: 2rem ;
+    margin-bottom: 1.5rem;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  .img1 {
+    grid-area: a;
+  }
+  .img2 {
+    display: grid;
+    grid-area: c;
+  }
+  .img3 {
+    grid-area: b;
+  }
+  .img4 {
+    grid-area: f;
+  }
+  .img5 {
+    grid-area: d;
+  }
+  .img6 {
+    display: grid;
+    grid-area: e;
+  }
+
+  .card  h2 {
+    display: none;
+  }
+
+  footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1.5rem, 0.3rem + 3vw, 1.9rem);
+    line-height: 2.8rem;
+
+    display: flex;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+
   }
 }
 
