@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Staatliches', cursive;
+  background-color: #EFF1FF;
+}
+
+header {
+  height: 38.4rem;
+  text-align: center;
+  background-color: #8E9AAF;
+}
+
+header img {
+  margin: 3.2rem 0;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #CBC0D3;
+  height: 4.9rem;
+
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.5rem;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  max-width: 42rem;
+  padding: 1.4rem 3.2rem 6.0rem;
+  margin: auto;
+
+}
+
+main > p {
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  color: #23053A;
+  text-align: center;
+
+  margin: 0 0 6.3rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-size: 1.7rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.2em;
+  color: #4A4E69;
+  text-align: center;
+
+  width: 11.2rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  background-color: #FEEAFA;
+
+  animation: topdown .7s .3s backwards;
+
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  margin-bottom: 3.2rem;
+  transition: all .2s;
+
+  animation: downtop .7s;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: blur(1px);
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
